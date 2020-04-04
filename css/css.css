@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
@@ -10,88 +10,81 @@ body {
   background-color: #181a1b;
 }
 
-/* Navbar container */
-.navbar {
-    overflow: hidden;
-    background-color: rgb(48, 51, 54);
-    font-family: Arial;
-    border-bottom: #181a1b 1px solid;
-  }
-
-  .navbar>* {
-    font-weight: bold;
-  }
-  
-  /* Links inside the navbar */
-  .navbar a {
+ /* Add a black background color to the top navigation */
+ .topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+  /* Style the links inside the navigation bar */
+  .topnav a {
     float: left;
-    font-size: 18px;
-    color: white;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 10px;
     text-decoration: none;
+    font-size: 16px;
   }
-  
-  /* The dropdown container */
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  /* Dropdown container - needed to position the dropdown content */
   .dropdown {
     float: left;
     overflow: hidden;
   }
-  
-  /* Dropdown button */
+  /* Style the dropdown button to fit inside the topnav */
   .dropdown .dropbtn {
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 12px 10px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit;
+    margin: 0;
   }
-  
-  /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: orangered;
-  }
-  
-  /* Dropdown content (hidden by default) */
+  /* Style the dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(48, 51, 54);
+    background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
-  /* Links inside the dropdown */
+  /* Style the links inside the dropdown */
   .dropdown-content a {
     float: none;
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
   }
-  
-  /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: grey;
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
   }
-  
-  /* Show the dropdown menu on hover */
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
   .dropdown:hover .dropdown-content {
     display: block;
   }
   
 .title {
   padding: 5vh 0 4vh 0;
-  margin: 1vh 1vw 2vh 1vw;
   text-align: center;
   background-image: url(../img/CongressOfVienna.jpg);
   background-position: left;
-  border-radius: 5em;
-  border: #000 2px solid;
+  background-size: cover;
+  border-bottom: 2px black solid;
 }
   .titletext {
     opacity: 1;
@@ -102,3 +95,81 @@ body {
   .subtitle {
     font-style: italic;
   }
+
+.page {
+  display: flex;
+  padding: 1em;
+}
+  .pagecontainer {
+    margin: auto;
+  }
+    .pagetitle {
+      font-size: 30px;
+      margin-bottom: 0.2em;
+    }
+    .pagetext {
+      padding-bottom: 2em;
+    }
+  .pageimg {
+    margin: 1em;
+    height: 25vh;
+    width: auto;
+    border: darkgray 2px solid;
+  }
+  #Napoleon {
+    border-radius: 2vw 4vw 2vw 4vw;
+  }
+
+footer {
+  padding: 5em 0 0.4em 0;
+  display: flex;
+  justify-content: center;
+}
+  .footerfooter {
+    display: flex;
+    justify-content: space-between;
+    border-top: darkgray 1px solid;
+    width: 800px;
+    padding: 0.2em 1em 0 1em;
+  }
+    .footerfooter>*, .footerfooter>*>* {
+      font-size: 15px;
+    }
+
+@media screen and (max-width: 800px) {
+  .pageimg {
+    display: none;
+  }
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}

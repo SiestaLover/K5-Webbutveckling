@@ -5,56 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/css.css">
-    <title>Document</title>
+    <script src="js/js.js" defer></script>
+    <title>Concert of Europe</title>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="">Concert of Europe</a>
+    <nav class="topnav" id="myTopnav">
+        <a href="#home">Concert of Europe</a>
         <div class="dropdown">
-            <button class="dropbtn">Post-Napoleon</button>
+            <button class="dropbtn">Legacy of Napoleon
+            </button>
             <div class="dropdown-content">
-                <a href="">A New Europe, The Congress of Vienna</a>
-                <a href="">Industrial Revolution</a>
-                <a href="">Ideologies</a>
+                <a href="#">The Congress of Vienna 1815</a>
+                <a href="#">Industrial Revolution</a>
+                <a href="#">Ideology</a>
             </div>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">1815-1871</button>
-            <div class="dropdown-content">
-                <a href="">Nationalist Revolutions</a>
-                <a href="">1848</a>
-                <a href="">Crimean War</a>
-                <a href="">Risorgimiento</a>
-                <a href="">Rise of the Kaiserreich</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">1871-1814</button>
-            <div class="dropdown-content">
-                <a href="">New Imperialism</a>
-                <a href="">Rise of the Japanese Empire</a>
-                <a href="">The Eastern Question & Balkan Crises</a>
-                <a href="">Crisis of 1914</a>
-            </div>
-        </div>
+        <a href="#news">1848</a>
+        <a href="#contact">Risorgimiento</a>
+        <a href="#contact">Rise of the Kaiserreich</a>
+        <a href="#about">New Imperialism</a>
+        <a href="">Crisis of 1914</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776</a>
     </nav>
     <header class="title">
         <p class="titletext">
-            The Concert of Europe 
+            The Concert of Europe
         </p>
         <p class="subtitle">From Napoleon to the Great War</p>
     </header>
-    <article>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab soluta quae ad, quos earum provident labore reprehenderit iure enim, molestias excepturi a dolor beatae doloribus vel nihil officia? Dolor, officia!
-        Quisquam quis praesentium dignissimos inventore animi incidunt nesciunt nisi temporibus beatae, repellat ipsum sed placeat obcaecati molestias a totam nihil voluptatum iste dolores aut natus delectus neque. Nostrum, repudiandae mollitia?
-        Quis nobis, iure similique officiis dolor libero pariatur beatae veniam tempore assumenda inventore voluptate. Quo maiores dolorum aut soluta beatae, quidem recusandae aliquam neque vero voluptates aliquid sunt nihil provident!
-        Dolore nulla eos necessitatibus molestias quod illum, quas corporis dolores, perspiciatis quae soluta itaque cumque dolor fugiat ullam obcaecati dolorem explicabo voluptatum hic similique tempore doloremque facilis beatae illo! Qui.
-        Ullam, vitae beatae? Sed voluptates quo expedita error eum doloribus a quod odio. Suscipit, ab. Quasi est, iure nobis iste quia tempore? Beatae, ab iure deserunt facilis expedita odit corporis.
-        Iste doloribus accusamus consequuntur laboriosam id aliquid quia ea velit, voluptas numquam perferendis aliquam expedita nobis quasi dolorum quisquam magnam cupiditate nihil voluptates dolore fugit pariatur amet. Perferendis, inventore eaque.
-        Rerum, quis repellat. Iure nulla odio accusantium consequatur qui. Accusamus fugit rem obcaecati commodi itaque vitae culpa, eius nisi asperiores architecto maxime id optio quis minima est quos quasi nihil?
-        Animi velit autem nulla sunt, incidunt sit? Provident laborum perspiciatis quaerat odit soluta sint, praesentium quis reiciendis nihil perferendis fuga harum voluptatum officia quibusdam libero assumenda, commodi consequuntur, voluptates cupiditate.
-        Magnam voluptatum veniam autem accusamus, optio neque. Cumque perferendis porro in dicta cupiditate esse mollitia neque magnam vero, sapiente explicabo voluptate quaerat enim optio provident dolorum temporibus, debitis a quasi!
-        Ipsa inventore in cupiditate ullam sit nostrum expedita molestias pariatur voluptate, doloribus nesciunt totam. A molestias at aliquid voluptates fugiat quasi perspiciatis blanditiis, esse cum quaerat. Aliquam error quibusdam iusto.
+    <article class="timeline">
+        <section class="page" id="NapoleonLegacy">
+            <div class="pagecontainer">
+                <h1 class="pagetitle">The Legacy of Napoleon</h1>
+                <p class="pagetext">
+                    It is hard to understate just how much Napoleon changed Europe. His reign over much of Europe led to higher political consciousness and the spread of Romanticism. 
+                    Slowly but surely, established systems, for example the power of the church or feudalism, lost ground to various new ideals and ideologies, not always without a fight.
+                    Still, Napoleon eventually lost and the borders were redrawn. Reactionary forces had taken control of Europe once again, but the impact could not be reversed. 
+                    Accompanied by the Industrial Revolution, the world was heading towards a new era of uncertainty, conflict and innovation.
+                </p>
+            </div>
+            <img src="img/Napoleon.jpg" alt="Painting of Napoleon on Horseback" class="pageimg" id="Napoleon">
+        </section>
+        <section class="page" id="CongressVienna">
+            <a href=""><img src="img/Europe1815.png" alt="Map of Europe after the Congress" class="pageimg" id="Europe1815"></a>
+            <div class="pagecontainer">
+                <h1 class="pagetitle">The Congress of Vienna 1815</h1>
+                <p class="pagetext">
+                    It is hard to understate just how much Napoleon changed Europe. His reign over much of Europe led to higher political consciousness and the spread of Romanticism. 
+                    Slowly but surely, established systems, for example the power of the church or feudalism, lost ground to various new ideals and ideologies, not always without a fight.
+                    Still, Napoleon eventually lost and the borders were redrawn. Reactionary forces had taken control of Europe once again, but the impact could not be reversed. 
+                    Accompanied by the Industrial Revolution, the world was heading towards a new era of uncertainty, conflict and innovation.
+                </p>
+            </div>
+        </section>
     </article>
+    <footer>
+        <section class="footerfooter">
+            <div class="copyright">
+                Copyright © 2020 Ron Inc. All Rights Reserved.
+            </div>
+            <div class="sources">
+                Source: <a href="https://www.wikipedia.org/">Wikipedia</a>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
