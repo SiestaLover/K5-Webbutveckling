@@ -4,6 +4,7 @@
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  box-sizing: border-box;
 }
 
 body {
@@ -36,7 +37,7 @@ body {
   outline: none;
   color: white;
   padding: 16px 14px;
-  background-color: inherit;
+  background-color: darkred;
   font-family: inherit;
   margin: 0;
 }
@@ -64,12 +65,15 @@ body {
   background-color: #ddd;
   color: black;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdowncontent {
   display: block;
+}
+.active {
+  background-color: darkred;
 }
 
 .title {
-  padding: 2.5vh 0 2vh 0;
+  padding: 1.5vh 0 1vh 0;
   text-align: center;
   background-color: #222;
 }
@@ -98,41 +102,44 @@ body {
   height: auto;
   padding-bottom: 2vw;
 }
-#section1 {
-  background-image: url("../img/Napoleon.jpg");
-  background-position: center top;
+.timelinearticle:last-child {
+  border-bottom: none;
 }
-#section3 {
+#article1 {
+  background-image: url("../img/Napoleon.jpg");
+  background-position-x: 70%;
+}
+#article3 {
   background-image: url("../img/IndustrialRevolution.jpg");
   background-position: center bottom;
 }
-#section5 {
+#article5 {
   background-image: url("../img/1848.jpg");
   background-position: center;
 }
-#section7 {
+#article7 {
   background-image: url("../img/1871.jpg");
   background-position: center;
 }
-#section9 {
+#article9 {
   background-image: url("../img/NewImperialism.png");
   background-position: left;
 }
-#section11 {
+#article11 {
   background-image: url("../img/WWI.jpg");
   background-position: center;
 }
 .articletitle {
   text-align: center;
   font-size: 40px;
-  padding-top: 2vh;
-  padding-bottom: 3vw;
-} 
+  padding-top: 0.5vw;
+  padding-bottom: 1vw;
+}
 .articletext {
   padding: 0 1vw 2em 1vw;
 }
 .smalltitle {
-  padding: 1vw 0 0.5vw 1vw;
+  padding: 0 0 0.5vw 1vw;
   font-size: 1.4em;
 }
 .linktotop {
@@ -146,13 +153,38 @@ body {
 .linktotop:hover {
   background-color: #555;
 }
-.linebreaker {
+br {
   display: none;
-  padding: auto;
+}
+
+.ideologyarticle {
+  padding: 1vw 1vw 1.5vw 1vw;
+}
+.ideologyarticle:nth-child(even) {
+  background-color: #333;
+}
+.grid {
+  display: grid;
+  grid: repeat(2, 1fr) / 1fr 1fr;
+  gap: 1vw 2vw;
+  align-items: center;
+}
+.ideologytitle {
+  text-align: left;
+  font-size: 30px;
+}
+.gridcol:first-child {
+  grid-row: 1 / span 2;
+}
+
+@media screen and (max-width: 800px){
+  .grid {
+    grid: auto / 1fr;
+  }
 }
 
 footer {
-  padding: 5vw 0 0.4vw 0;
+  padding: 1vw 0 0.5vw 0;
   display: flex;
   justify-content: center;
 }
@@ -196,10 +228,10 @@ footer {
 }
 
 @media screen and (max-width: 960px) {
-  #section5 {
+  #article5 {
     background-position: left top;
   }
-  #section7 {
+  #article7 {
     background-position: left;
   }
 }
@@ -211,13 +243,13 @@ footer {
   .subtitle {
     font-size: 3.5vw;
   }
-  .linebreaker {
-    display: block;
-  }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   .footerfooter {
     flex-direction: column;
+  }
+  br {
+    display: block;
   }
 }
